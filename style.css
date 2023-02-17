@@ -1,75 +1,78 @@
 body {
-	height: 100vh;
-    background-image: linear-gradient(to right, #2b5876 , #4e4376);
+  height: 100vh;
+  background-image: linear-gradient(to right, #2b5876, #4e4376);
 }
-h1{
-    font-size: 40px;
-    width: calc(100%-20);
-    text-align: center;
-    padding:20px;
+h1 {
+  font-size: 40px;
+  width: calc(100%-20);
+  text-align: center;
+  padding: 20px;
 }
-main{
-    display: flex;
+main {
+  display: flex;
+  width: 100%;
 }
-.wrapper, .single-card {
-	height: 450px;
-    width: 300px;
-	margin: 0 auto;
+.wrapper,
+.single-card {
+  height: 450px;
+  width: 300px;
+  margin: 0 auto;
 }
 .single-card {
-	text-align: center;
-	transition: all 1.5s cubic-bezier(0.7, -0.5, 0.3, 1.8);
-	transform-style: preserve-3d;
+  text-align: center;
+  transition: all 1.5s cubic-bezier(0.7, -0.5, 0.3, 1.8);
+  transform-style: preserve-3d;
 }
 .wrapper:hover .single-card {
-	transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
-.front, .back {
-	width: 300px;
-	position: relative;
-	top: 0;
-	left: 0;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+.front,
+.back {
+  width: 300px;
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .front {
-	cursor: pointer;
-	height: 100%;
-	background-image: url(cardBack.jpg);
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	border-radius: 20px;
-	background-size: cover;
-	background-position: center center;
+  cursor: pointer;
+  height: 100%;
+  background-image: url(cardBack.jpg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center center;
 }
 .back {
-	transform: rotateY(180deg);
-	position: absolute;
-	border-radius: 20px;
-	height: 450px;
-	background: #fff;
+  transform: rotateY(180deg);
+  position: absolute;
+  border-radius: 20px;
+  height: 450px;
+  background: #fff;
 }
-.back img{
-    width: 200px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.back img {
+  width: 200px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .content {
-	padding-top: 20px;
+  padding-top: 20px;
 }
 .content h2 {
-	font-size: 35px;
-	margin: 0;
-    margin-top: 20px;
-	font-weight: 300;
+  font-size: 35px;
+  margin: 0;
+  margin-top: 20px;
+  font-weight: 300;
 }
 .content h4 {
-	margin: 0;
+  margin: 0;
 }
 .socials {
-	margin-top: 20%;
+  margin-top: 20%;
 }
 .socials i {
-	font-size: 30px;
-	margin: 0 10px;
+  font-size: 30px;
+  margin: 0 10px;
 }
