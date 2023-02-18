@@ -41,7 +41,7 @@
 }
 
 body {
-  background-image: linear-gradient(rgb(253 158 255), rgb(86 91 151));
+  background-image: linear-gradient(rgb(86 91 151),rgb(253 158 255), rgb(86 91 151));
 }
 
 h1 {
@@ -61,10 +61,11 @@ img {
 }
 
 .BB {
+  margin-top:150px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   font-family: "Montserrat", sans-serif;
 } 
 
