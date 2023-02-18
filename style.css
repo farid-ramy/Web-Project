@@ -33,12 +33,12 @@ img {
   background-color: transparent;
   border-radius: 10px;
   perspective: 1000px;
+  margin: 3px;
 }
 
 /* Flip Inner Container */
 .flip-inner-container {
   position: relative;
-  width: 100%;
   height: 100%;
   text-align: center;
   transform-style: preserve-3d;
@@ -57,7 +57,6 @@ img {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  /* background-color: green; */
   border-radius: 10px;
   box-shadow: -1px 2px 13px 0px rgba(0, 0, 0, 0.75);
 }
@@ -168,25 +167,12 @@ img {
   color: white;
   margin-top: 100px;
 }
-
-.flip-back .btn {
-  display: block;
-  padding: 10px 20px;
-  background: #000000;
-  text-decoration: none;
-  color: #ffffff;
-  margin: 10px;
-  border-radius: 20px;
-}
-
-.flip-back .btn:hover {
-  color: rgb(0, 0, 0);
-  background: #ffffff;
-  border: 2px solid #ffffff;
-}
-
-a img{
+a img {
   width: 50px;
   height: 50px;
-  margin-top:100px;
+  margin-top: 100px;
+  transition: 0.2s;
+}
+a img:hover {
+  transform: scale(1.3);
 }
