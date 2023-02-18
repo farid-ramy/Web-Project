@@ -1,78 +1,187 @@
-body {
-  height: 100vh;
-  background-image: linear-gradient(to right, #2b5876, #4e4376);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,700;1,100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 h1 {
-  font-size: 40px;
-  width: calc(100%-20);
+  color: white;
+  background-color: #c500d6;
+  border-radius: 20px;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  border-radius: 3px;
+}
+
+.BB {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.flip-container {
+  border: 2px solid transparent;
+  width: 250px;
+  height: 400px;
+  background-color: transparent;
+  border-radius: 10px;
+  perspective: 1000px;
+}
+
+/* Flip Inner Container */
+.flip-inner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+/* add hover to Flip horizonally */
+.flip-container:hover .flip-inner-container {
+  transform: rotateY(180deg);
+}
+
+/* position front and back */
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  /* background-color: green; */
+  border-radius: 10px;
+  box-shadow: -1px 2px 13px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* flip  front from Start Here */
+.flip-front {
+  background: #21203b;
+  color: #ffffff;
   padding: 20px;
 }
-main {
-  display: flex;
-  width: 100%;
-}
-.wrapper,
-.single-card {
-  height: 450px;
-  width: 300px;
-  margin: 0 auto;
-}
-.single-card {
-  text-align: center;
-  transition: all 1.5s cubic-bezier(0.7, -0.5, 0.3, 1.8);
-  transform-style: preserve-3d;
-}
-.wrapper:hover .single-card {
-  transform: rotateY(180deg);
-}
-.front,
-.back {
-  width: 300px;
-  position: relative;
-  top: 0;
-  left: 0;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.front {
-  cursor: pointer;
-  height: 100%;
-  background-image: url(cardBack.jpg);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 20px;
+
+.flip-front .profile-image1 {
+  background-image: url("Me2.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
-}
-.back {
-  transform: rotateY(180deg);
-  position: absolute;
-  border-radius: 20px;
-  height: 450px;
-  background: #fff;
-}
-.back img {
-  width: 200px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-.content {
-  padding-top: 20px;
-}
-.content h2 {
-  font-size: 35px;
-  margin: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  margin: auto;
   margin-top: 20px;
-  font-weight: 300;
 }
-.content h4 {
-  margin: 0;
+.flip-front .profile-image2 {
+  background-image: url("sarah.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  margin: auto;
+  margin-top: 20px;
 }
-.socials {
-  margin-top: 20%;
+.flip-front .profile-image3 {
+  background-image: url("dalia.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  margin: auto;
+  margin-top: 20px;
 }
-.socials i {
-  font-size: 30px;
-  margin: 0 10px;
+.flip-front .profile-image4 {
+  background-image: url("karen.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  margin: auto;
+  margin-top: 20px;
+}
+.flip-front .profile-image5 {
+  background-image: url("joe.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.flip-front h3 {
+  margin-top: 5px;
+}
+
+.flip-front h6 {
+  font-weight: 200;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+.flip-front h5 {
+  text-transform: uppercase;
+  margin: 30px 0 5px 0;
+}
+
+.flip-front .skills {
+  border-top: 1px solid #c500d6;
+  padding-top: 10px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.flip-front .skills span {
+  background: #ffffff;
+  color: #000000;
+  padding-top: 2px 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* flip back from Start Here */
+.flip-back {
+  background: #c500d6;
+  transform: rotateY(180deg);
+}
+
+.flip-back h2 {
+  color: white;
+  margin-top: 100px;
+}
+
+.flip-back .btn {
+  display: block;
+  padding: 10px 20px;
+  background: #000000;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.flip-back .btn:hover {
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+  border: 2px solid #ffffff;
 }
