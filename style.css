@@ -152,8 +152,7 @@ img {
 }
 
 .flip-front .skills span {
-  background: #ffffff;
-  color: #000000;
+  color: #ffffff;
   padding-top: 2px 5px;
   margin-bottom: 10px;
   display: inline-block;
@@ -184,4 +183,10 @@ img {
   color: rgb(0, 0, 0);
   background: #ffffff;
   border: 2px solid #ffffff;
+}
+
+a img{
+  width: 50px;
+  height: 50px;
+  margin-top:100px;
 }
